@@ -1,0 +1,515 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.header {
+    width: 100vw;
+    padding-top: 40px;
+    background-image: url("../image/photo32.jpg");
+    background-position: center;
+    background-size: cover;
+    position: fixed -20px;
+    z-index: 9999;
+}
+
+.header__container {
+    height: 7vw;
+    background: transparent;
+}
+
+
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: cornflowerblue;
+    font-size: 140px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+}
+
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: -350px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: cornflowerblue;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: midnightblue;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: royalblue;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu {
+    position: absolute;
+    width: 350px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: transparent;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 0;
+    font-size: 23px;
+    font-family: 'Finger Paint', cursive;
+    text-shadow: 1px 1px 8px 8px lightskyblue;
+
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+
+.healthy {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.healthy__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.healthy__psychic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.healthy__alltext {
+    width: 900px;
+    margin-top: 200px;
+    margin-right: 0px;
+}
+
+.healthy__top {
+    font-weight: 800;
+    font-size: 4rem;
+    color: #000033;
+    line-height: 25px;
+    font-family: 'Sacramento', cursive;
+    text-shadow: #b3d3eb 0.1em 0.1em 0.2em;
+
+}
+
+.healthy__text {
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000033;
+    line-height: 25px;
+    font-family: 'Sacramento', cursive;
+    text-shadow: #b3d3eb 0.1em 0.1em 0.2em;
+
+}
+
+.healthy__text2 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: #000033;
+    line-height: 100px;
+    font-family: 'Sacramento', cursive;
+    text-shadow: #99CCFF 0.1em 0.1em 0.2em;
+}
+
+.healthy__allimage {
+    width: 35%;
+}
+
+.healthy__image {
+    width: 350px;
+    height: 350px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 10px ghostwhite;
+}
+
+
+.mind {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.mind__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.mind__top {
+    display: flex;
+    padding: 60px 0 60px 0;
+}
+
+.mind__allimage {
+    width: 35%;
+}
+
+.mind__image {
+    width: 350px;
+    height: 450px;
+    margin-left: 100px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 10px ghostwhite;
+}
+
+.mind__alltext {
+    margin-top: -50px;
+    width: 900px;
+    margin-right: 200px;
+    margin-left: 40px;
+}
+
+.mind__text3 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: #000033;
+    line-height: 100px;
+    font-family: 'Sacramento', cursive;
+    text-shadow: #99CCFF 0.1em 0.1em 0.2em;
+}
+
+
+.phisical {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.phisical__container {
+    background-image: url("../image/photo30.jpg");
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.weather__container {
+}
+
+.weather__img {
+    transition-timing-function: linear;
+}
+
+.phisical__top {
+}
+
+.phisical__alltext {
+    margin: 100px 200px;
+    margin-left: 300px;
+}
+
+.phisical__text1 {
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 500px;
+    color: #052048;
+    text-shadow: 3px 9px 4px #999598;
+}
+
+.phisical__text2 {
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 400px;
+    color: #052048;
+    text-shadow: 3px 9px 4px #999598;
+}
+
+.phisical__text3 {
+    font-weight: 600;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 400px;
+    color: #052048;
+
+}
+
+.phisical__component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.phisical__a {
+    border: 1px solid floralwhite;
+    width: 200px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 10px floralwhite;
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+    font-weight: 600;
+    color: midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accept {
+    background-color: #CFD3D6;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+.accept__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-image: url(../image/photo34.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.accept__top {
+    padding: 60px 0 60px 0;
+
+}
+
+.accept__img {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+
+.accept__img1 {
+    width: 350px;
+    height: 450px;
+    box-shadow: 1px 1px 10px 10px floralwhite;
+    border-radius: 20px;
+    margin-right: 60px;
+}
+
+.accept__img2 {
+    width: 350px;
+    height: 450px;
+    box-shadow: 1px 1px 10px 10px floralwhite;
+    border-radius: 20px;
+    margin-right: 60px;
+}
+
+.accept__img3 {
+    width: 350px;
+    height: 450px;
+    box-shadow: 1px 1px 10px 10px floralwhite;
+    border-radius: 20px;
+}
+
+.accept__alltext {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.accept__text {
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: 'Sacramento', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: floralwhite;
+    text-shadow: 0.1em 0.1em 0.2em #0847c6;
+    text-align: center;
+}
+
+.accept__allbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accept__btn {
+    border: 1px solid floralwhite;
+    width: 200px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 10px floralwhite;
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+    font-weight: 600;
+    color: midnightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bmi {
+    width: 100vw;
+}
+
+.bmi__container {
+    background-image: url("../image/photo31.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+
+}
+
+.bmi__top {
+    display: flex;
+    padding: 60px 0 60px 0;
+}
+
+
+.bmi__allimg {
+    width: 40%;
+}
+
+.bmi__img {
+    margin-left: 100px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 1px 1px 10px 10px lightpink;
+    border-radius: 20px;
+}
+
+.bmi__alltext {
+    display: flex;
+    width: 60%;
+    padding: 60px;
+}
+
+
+.bmi__text {
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: 'Sacramento', cursive;
+    margin-left: 100px;
+    color: #052048;
+    text-shadow: 3px 9px 4px lightpink;
+}
+
+.bmi__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi__button {
+    border: 1px solid floralwhite;
+    width: 250px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 10px lightpink;
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+    font-weight: 600;
+    color: #052048;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+.
+}
+

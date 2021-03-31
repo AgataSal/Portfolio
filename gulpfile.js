@@ -1,19 +1,38 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var sourcemaps = require("gulp-sourcemaps");
+var autoprefixer = require("gulp-autoprefixer");
+var browserSync = require("browser-sync").create();
 
-sass.compiler = require("sass");
+gulp.task("watch", function(cb) {
+    gulp.watch("development/scss/**/*.scss", gulp.series("sass"));
+    cb();
+});
+ulp.task("serve", function(cb) {
+    g
+    browserSync.init({
+        server: "./development"
+    });
+    gulp.watch("development/scss/**/*.scss", gulp.series("sass"));
+    gulp.watch("development/*.html").on("change", browserSync.reload);
+    gulp.watch("development/js/*.js").on("change", browserSync.reload);
+    cb();
+});
 
-
-const css = function() {
-    return gulp.src("src/scss/style.scss")
+// Compile sass into CSS & auto-inject into browsers
+gulp.task("sass", function() {
+    return gulp
+        .src("development/scss/**/*.scss")
+        .pipe(sass().on("error", sass.logError))
+        .pipe(sourcemaps.init())
         .pipe(
-            sass({
-                outputStyle : "compressed"
-            }).on("error", sass.logError)
+            autoprefixer({
+                browsers: ["last 4 versions"]
+            })
         )
-        .pipe(gulp.dest("dist/css"));
-}
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("development/css"))
+        .pipe(browserSync.stream());
+});
 
-
-exports.default = gulp.series(css);
-exports.css = css;
+gulp.task("default", gulp.series("serve"));

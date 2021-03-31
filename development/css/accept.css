@@ -1,0 +1,61 @@
+.accept {
+    height: 100%;
+    width: 100%;
+    background-image: url("../image/photo36.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.accept__container{}
+
+.accept__header {
+    display: flex;
+}
+
+.accept__alltext {
+    width: 65%;
+    margin-top: 50px;
+
+}
+
+.accept__text1 {
+    font-weight: 600;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 150px;
+    color: #113009;
+}
+
+.accept__text2 {
+    font-weight: 600;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    font-family: 'Josefin Sans', sans-serif;;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #113009;
+    margin-left: 150px;
+}
+
+.accept__allimg {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.accept__img {
+    width: 400px;
+    height: 500px;
+    box-shadow: 1px 1px 10px 10px lightgreen;
+    border-radius: 20px;
+
+}
+

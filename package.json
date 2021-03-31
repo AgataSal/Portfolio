@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio",
+  "name": "Portfolio2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp-sourcemaps": "1.7.x",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "sass": "^1.32.8"
   }
 }
+
