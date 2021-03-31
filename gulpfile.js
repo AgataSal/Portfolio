@@ -8,8 +8,7 @@ gulp.task("watch", function(cb) {
     gulp.watch("development/scss/**/*.scss", gulp.series("sass"));
     cb();
 });
-ulp.task("serve", function(cb) {
-    g
+gulp.task("serve", function(cb) {
     browserSync.init({
         server: "./development"
     });
